@@ -1,0 +1,14 @@
+{
+  "dependencies" : [
+    {
+      "repositoryURL" : "git@github.com:impossibleflight\/Bridge.git",
+      "version" : "1"
+    },
+    {
+      "repositoryURL" : "git@github.com:lukaskubanek\/LoremSwiftum.git",
+      "version" : "2"
+    }
+  ],
+  "module" : true,
+  "name" : "StoryKit"
+}

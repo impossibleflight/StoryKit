@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="iTH-MJ-6u2">
+            <objects>
+                <viewController storyboardIdentifier="search" title="Search" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w78-LW-QnG" customClass="SearchViewController" customModule="StoryKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3YS-SQ-Bf7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GCV-3r-GN7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-r0-te6">
+                                        <rect key="frame" x="121.5" y="20" width="144.5" height="607"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GCV-3r-GN7" firstAttribute="trailing" secondItem="mpY-jw-0ZW" secondAttribute="trailing" id="BOF-pB-nrz"/>
+                            <constraint firstItem="mpY-jw-0ZW" firstAttribute="top" secondItem="GCV-3r-GN7" secondAttribute="top" id="Rrd-tq-1aH"/>
+                            <constraint firstItem="GCV-3r-GN7" firstAttribute="bottom" secondItem="mpY-jw-0ZW" secondAttribute="bottom" id="fEF-ib-SHq"/>
+                            <constraint firstItem="GCV-3r-GN7" firstAttribute="leading" secondItem="mpY-jw-0ZW" secondAttribute="leading" id="qlD-hy-ipC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mpY-jw-0ZW"/>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="GCV-3r-GN7" id="QZa-A4-VwJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dn2-UU-mhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344.80000000000001" y="-550.07496251874068"/>
+        </scene>
+        <!--Search Results View Controller-->
+        <scene sceneID="7lK-sA-2JQ">
+            <objects>
+                <tableViewController storyboardIdentifier="results" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WR9-lA-M5S" customClass="SearchResultsViewController" customModule="StoryKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="141" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="u1Q-Pr-DGe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="WR9-lA-M5S" id="Gh2-px-tMq"/>
+                            <outlet property="delegate" destination="WR9-lA-M5S" id="8Pf-7Q-DCv"/>
+                        </connections>
+                    </tableView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="inputSignature" value="(query: String?)"/>
+                    </userDefinedRuntimeAttributes>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2w-VV-3Lw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-550"/>
+        </scene>
+    </scenes>
+</document>
